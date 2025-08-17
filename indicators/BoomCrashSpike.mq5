@@ -149,7 +149,7 @@ int OnInit()
 	atrHandle    = iATR(_Symbol, PERIOD_CURRENT, InpATRPeriod);
 	maFastHandle = iMA(_Symbol, PERIOD_CURRENT, InpFastMAPeriod, 0, MODE_EMA, PRICE_CLOSE);
 	maSlowHandle = iMA(_Symbol, PERIOD_CURRENT, InpSlowMAPeriod, 0, MODE_EMA, PRICE_CLOSE);
-	bbHandle     = iBands(_Symbol, PERIOD_CURRENT, InpBBPeriod, 0, InpBBDeviation, PRICE_CLOSE);
+	bbHandle     = iBands(_Symbol, PERIOD_CURRENT, InpBBPeriod, InpBBDeviation, 0, PRICE_CLOSE);
 
 	if(rsiHandle == INVALID_HANDLE || atrHandle == INVALID_HANDLE ||
 	   maFastHandle == INVALID_HANDLE || maSlowHandle == INVALID_HANDLE ||
